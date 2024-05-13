@@ -1,0 +1,28 @@
+<nav class="main-nav js-stick">
+    <div class="container relative clearfix pt-10">
+      
+        <!-- Logo ( * your text or image into link tag *) -->
+        <div class="nav-logo-wrap local-scroll">
+            <a href="#top" class="menu-position" ><img class="logo_img " src="/assets/images/guard-sec.png" alt="" /></a>
+        </div>
+
+<div class="mobile-nav active" (click)="mobilenavclick()"><i class="fa fa-bars"></i></div>
+
+<!-- Main Menu -->
+    <div class="inner-nav desktop-nav pt-10" [ngClass]="isMenuOpen ? 'desktop-nav-open' : 'desktop-nav-close' ">            			               
+          <ul class="clearlist scroll-nav local-scroll" (click)="mobilenavclick()">
+            <li class="active"><a class="menu-position" href="/">Home</a></li>
+              <li><a class="menu-position" href="#about">About us</a></li>                        	
+              <li><a class="menu-position" href="#services">Services</a></li>
+              <li><a class="menu-position" routerLink="/article-page" routerLinkActive="active" ariaCurrentWhenActive="page">Article</a></li>						
+              <li><a class="menu-position" href="#contact">Contacts</a></li>
+              <li class="hidden-xs hidden-sm hidden-md"><a class="menu-position" >|</a></li>
+                
+                <!-- End Item With Sub -->
+                
+            </ul>
+        </div>
+    
+    </div>
+</nav>	
+<router-outlet></router-outlet>
